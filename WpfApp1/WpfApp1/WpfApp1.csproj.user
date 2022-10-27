@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AdminPanelWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Authorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubjectOperationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubjectPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ScheduleOperationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SchedulesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyAccountPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MarksOperationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MarksPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PersonOperationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanelWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Authorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubjectOperationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubjectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ScheduleOperationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SchedulesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyAccountPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MarksOperationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MarksPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PersonOperationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

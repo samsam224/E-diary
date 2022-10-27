@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfApp1.ScheduleOperationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="ScheduleOperationWindow" Height="450" Width="1000" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <DataGrid Name="scheduleGrid" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="scheduleGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Предмет" Binding="{Binding SubjectName}" Width="150">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Кабинет" Binding="{Binding CabinetNumber}" Width="75">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Класс" Binding="{Binding ClassNumber}" Width="75"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Урок" Binding="{Binding LessonNumber}" Width="50"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Дата добавления" Binding="{Binding DateAdded}" Width="150"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Предмет" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="100,0,0,0" Width="83"></TextBlock>
+            <TextBlock Grid.Row="1" Text="Кабинет" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="100,0,0,0" Width="83"></TextBlock>
+            <TextBlock Grid.Row="2" Text="Класс" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="100,0,0,0" Width="83"></TextBlock>
+            <TextBlock Grid.Row="3" Text="Урок" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="100,0,0,0" Width="83"></TextBlock>
+            <TextBlock Grid.Row="4" Text="Дата" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="100,0,0,0" Width="83"></TextBlock>
+
+
+
+            <TextBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Name="TbTitle" Height="25"></TextBox>
+            <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Name="TbCabinet" Height="25"></TextBox>
+            <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Name="TbClass" Height="25"></TextBox>
+            <TextBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Name="TbLesson" Height="25"></TextBox>
+            <DatePicker Name ="dp2" VerticalAlignment="Top" HorizontalAlignment="Center"  Width="172" Height="25" Margin="0,25,0,0" Grid.Column ="1" Grid.Row="4"/>
+
+            <Button Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="5" Height="35" Width="70" HorizontalAlignment="Left" VerticalAlignment="Center" Name="BtnInsert" Margin="50, 0, 100, 0" Click="BtnInsert_Click">Добавить</Button>
+            <Button Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="5" Height="35" Width="70" HorizontalAlignment="Left" VerticalAlignment="Center" Name="BtnUpdate" Margin="150, 0, 100, 0" Click="BtnUpdate_Click">Изменить</Button>
+            <Button Grid.Column="1" Grid.Row="5" Height="35" Width="70" HorizontalAlignment="Left" VerticalAlignment="Center" Name="BtnDelete" Margin="50,0,0,0" Click="BtnDelete_Click">Удалить</Button>
+        </Grid>
+    </Grid>
+</Window>

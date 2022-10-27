@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastCSV" Version="1.0.1" />
+    <PackageReference Include="FastCsvParser" Version="1.1.1" />
+    <PackageReference Include="Helpwiz.FastCsvReader" Version="1.0.6" />
+    <PackageReference Include="Knapcode.FastCsvParser" Version="1.1.0" />
+    <PackageReference Include="mgholam.fastCSV" Version="2.0.9" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+    <PackageReference Include="NeoCiber.FastCSV" Version="2.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
+  </ItemGroup>
+
+</Project>
